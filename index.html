@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dab5bc4e48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMdIW22X8n6dO5Zd3nfdd/nXwYyo4Pso6VY+X0X" crossorigin="anonymous">
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="titulo_principal">ENCRIPTADOR DE <strong>TEXTO</strong></h1>
+    </header>
+    <main>
+        <section class="recuadros-texto">
+            <div class="recuadro-titulo">
+                <h2 for="input-text">Ingrese el texto</h2>
+                <textarea type="text" class="entrada-texto" id="input-text-encriptar" name="input-text-encriptar" oninput="validarEntrada(this)" placeholder="Ingresar solo letras minúsculas, sin acentos ni caracteres especiales"></textarea>
+                <i onclick="pegarDesdePortapapeles()" class="fa-regular fa-paste icono-copiar"></i>
+            </div>
+            <div class="recuadro-titulo">
+                <h2 for="output-text">Resultado</h2>
+                <textarea type="text" class="entrada-texto" id="output-text-encriptado" name="output-text" placeholder="Ningún mensaje encontrado" readonly></textarea>
+                <i onclick="copiarAlPortapapeles()" class="fa-regular fa-copy icono-copiar"></i>
+                
+            </div>    
+        </section>
+        <section class="botones">
+            <button class="boton boton1" id="encriptar" onclick="encriptar()">Encriptar</button>
+            <button class="boton boton2" id="copiar" onclick="desencriptar()">Desencriptar</button>
+        </section>
+
+        <!-- Nuevo recuadro blanco -->
+        <div class="nombre-recuadro">
+            <p>Axel García Gasca</p>
+            <div>
+            <a href="https://github.com/AxelGasca22"><img class="logo" src="img/github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/axel-gabriel-garcia-gasca-495398298/"><img class="logo" src="img/linkedin.webp" alt="LinkedIn"></a>
+            </div>
+        </div>
+
+    
+        
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

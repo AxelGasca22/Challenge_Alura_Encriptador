@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Life+Savers:wght@400;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --color-header: #E6E6FA;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22d4fd;
+
+    --fuente-monserrat: 'Monserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    
+    
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    /* padding: 0; */
+}
+
+
+body {
+    background: linear-gradient(180deg, #FFFFFF 0%, #E0F7FA 60.84%, #F3E5F5 100%);
+    background-attachment: fixed; /* Asegura que el gradient cubra todo el fondo */
+    /*background-size: cover; /* Asegura que el gradient cubra todo el fondo */
+   /*background-repeat: no-repeat; /* Evita que el fondo se repita */ 
+    /* display: flex;
+    flex-direction: column; */
+    min-height: 100vh; /* Asegura que el body cubra al menos la altura de la ventana */
+    padding-bottom: 30rem; /* Añade espacio al final de la página */
+}
+
+
+h2{
+    font-family: var(--fuente-monserrat);
+    color: #d7d7ed
+}
+
+h5{
+    font-family: var(--fuente-monserrat);
+    color: #bbbbcf
+}
+
+.header{
+    background-color: var(--color-header);
+    padding: 2%;
+}
+
+.titulo_principal{
+    font-family: "Life Savers", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    .titulo_principal{
+        font-size: 30px;
+    }
+}
+.recuadros-texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10.7rem;
+    padding-top: 5%;    
+}
+
+@media (max-width: 768px) {
+    .recuadros-texto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.entrada-texto{
+    width: 22.7rem;
+    height: 32.7rem;
+    display: flex;
+    align-items: flex-start; /* Alinea el contenido en la parte superior */  
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Efecto de sombreado */
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    font-size: 1.1rem;
+    font-family: var(--fuente-monserrat);
+    margin-top: 4%;
+    resize: none;
+    padding: 10px;
+    
+
+}
+
+@media (max-width: 768px) {
+    .entrada-texto{
+        max-width: 80%;
+        height: 20rem;
+    }
+}
+
+.recuadro-titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Estilo para el placeholder */
+.entrada-texto::placeholder {
+    font-family: var(--fuente-monserrat);
+    text-align: center;
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente del placeholder */
+    color: #B5A7A7; /* Color del placeholder */
+    padding: 4rem;
+}
+
+/* Pseudo-elemento para la imagen del placeholder */
+.entrada-texto::before {
+    content: url('img/Frame.png'); /* Ruta a tu imagen */
+    position: absolute;
+    top: 50%; /* Ajusta según sea necesario */
+    left: 50%; /* Ajusta según sea necesario */
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    pointer-events: none; /* Permite hacer clic a través de la imagen */
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+}
+
+.icono-copiar{
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .icono-copiar{
+        margin: 7%;
+    }
+}
+
+/***************BOTONES*******************/
+
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 5%;
+}
+
+.boton{
+    font-family: var(--fuente-monserrat);
+    font-size: 1.2rem;
+    width: 27.8rem;
+    padding: 1.1rem;
+    border-radius: 20px;
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.boton1{
+    background: #9370DB;
+    color: #4D4D4D;
+}
+
+.boton2{
+    background-color: #D8BFD8;
+    color: white;
+}
+
+.nombre-recuadro {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    background-color: white; /* Color de fondo blanco */
+    color: black; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    width: 40rem; /* Ajusta el ancho al contenido */
+    margin: 20px auto ; /* Centra el recuadro horizontalmente */
+    font-family: var(--fuente-monserrat); /* Fuente */
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Efecto de sombreado */
+}
+
+@media (max-width: 768px) {
+    .nombre-recuadro{
+        width: 80%;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+
+    body{
+        padding-bottom: 50rem;
+    }
+}
+
+.logo{
+    width: 80px;
+    height: auto;
+}
